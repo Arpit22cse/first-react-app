@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base{
+  html{
+    background-color: rgb(0, 0, 0);
+  }
+}

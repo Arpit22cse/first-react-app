@@ -19,12 +19,13 @@ function Todo(){
     <h1 className="text-4xl text-yellow-500">To do List</h1>
     <br/>
     <label htmlFor="" className="text-blue-400 text-2xl lg:text-lg">Enter Your task below:</label><br />
-    <input className="border-2 border-black m-1 mb-16" id="input"/>
-    <button  className=" min-w-16 bg-green-300 border-green-500 border-2 mx-1 hover:bg-green-200" onClick={addingTask}>Add</button>
-    <ul className="grid grid-cols-1 text-pink-900 font-mono text-2xl justify-items-center">
+    <input className="border-4 min-w-64 border-pink-400 m-1 mb-16" id="input"/>
+    <button  className="hover:shadow-green-200 shadow-md min-w-16 bg-green-300 border-green-500 border-2 mx-1 hover:bg-green-200" onClick={addingTask}>Add</button>
+    <ul className="grid grid-cols-1 text-sky-400 font-mono text-2xl justify-items-center">
       {TaskList.map((task,index)=>
-      <li className="flex p-0 min-w-96  bg-yellow-300  m-1 block  border-2 border-black" id={index}><label htmlFor="">Task  {index+1}:</label>{task}  
-      <button className="bg-red-500 m-1 border-2 border-red-800 text-white text-sm hover:bg-red-300 hover:text-black " onClick={()=>deleteTask(index)}>delete</button>
+      <li className="flex p-0 min-w-96 shadow-md bg-slate-700  m-2  border-4 border-green-300 hover:shadow-green-200 " id={index}><span className="flex basis-full">Task {index+1}: {task}</span>
+      <button className="shadow-sm shadow-red-300 bg-red-500 m-1 border-2 rounded-xl border-red-800 text-white text-sm hover:bg-red-300 hover:text-black p-1" onClick={()=>deleteTask(index)}>delete</button>
+      <button className="m-1">↑</button><button>↓</button>
         </li>
         
       )}

@@ -23,9 +23,9 @@ function Todo(){
     <button  className="hover:shadow-green-200 shadow-md min-w-16 bg-green-300 border-green-500 border-2 mx-1 hover:bg-green-200" onClick={addingTask}>Add</button>
     <ul className="grid grid-cols-1 text-sky-400 font-mono text-2xl justify-items-center">
       {TaskList.map((task,index)=>
-      <li className="flex p-0 min-w-96 shadow-md bg-slate-700  m-2  border-4 border-green-300 hover:shadow-green-200 " id={index}><span className="flex basis-full">Task {index+1}: {task}</span>
+      <li className="flex justify-text-centre p-0 min-w-full shadow-md bg-slate-700  m-2  border-4 border-green-300 hover:shadow-green-200 " id={index}><span className="flex basis-full">Task {index+1}: {task}</span>
       <button className="shadow-sm shadow-red-300 bg-red-500 m-1 border-2 rounded-xl border-red-800 text-white text-sm hover:bg-red-300 hover:text-black p-1" onClick={()=>deleteTask(index)}>delete</button>
-      <button className="m-1">↑</button><button>↓</button>
+      <button className="ml-4 mr-4">↑</button><button className="mr-4">↓</button>
         </li>
         
       )}
